@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+</head>
+<body>
+<h1>注册页面</h1>
+
+
+<form action="" method="post" id="register-form" style="text-align: center;">
+    {% csrf_token %}
+    <p>
+        <input id="id_username" maxlength="254" name="username" type="text" placeholder="请输入用户名">
+    </p>
+    <p>
+        <input id="id_password" maxlength="254" name="password" type="password" placeholder="请输入密码">
+    </p>
+    <p>
+        <input id="id_mail" maxlength="254" name="mail" type="email" placeholder="请输入邮箱">
+    </p>
+    <p style="color: red">
+        {{ msg }}
+    </p>
+    <p>
+        <input type="submit" value="注册">
+    </p>
+</form>
+
+</body>
+</html>

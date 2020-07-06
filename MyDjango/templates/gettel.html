@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询手机号</title>
+</head>
+<body>
+<form action="" method="get">
+    请输入你的tel：<input type="text" name="tel"> <br>
+    <br>
+    <input type="submit" value="提交">
+
+</form>
+
+
+{#如果返回的结果是空的，在页面上就不显示#}
+{% if info %}
+    <p>查询结果</p>
+    <p>名称：{{ info.name }}</p>
+    <p>年龄：{{ info.age }}</p>
+    <p>邮箱：{{ info.mail }}</p>
+{% endif %}
+
+</body>
+</html>

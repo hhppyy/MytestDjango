@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+</head>
+<body>
+<h1>欢迎进入登录页面</h1>
+
+<form action="" method="post" id="login-form" style="text-align:center;">
+    {% csrf_token %}
+    <p>
+        <input id="id_username" maxlength="254" name="username" type="text" placeholder="请输入用户名" >
+    </p>
+    <p>
+        <input id="id_password" maxlength="254" name="password" type="password" placeholder="请输入密码">
+    </p>
+    <p style="color: red">
+        {{msg}}
+    </p>
+    <p>
+        <input type="submit" value="登录">
+    </p>
+</form>
+
+
+
+</body>
+</html>

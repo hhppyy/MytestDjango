@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer" />
+    <title>个人信息</title>
+</head>
+<body>
+{% load mytags %}
+
+<h1>当前时间：{% current_time %}</h1>
+
+
+<h1>昵称:{{ nicheng }}</h1>
+<p>姓名：{{ name }}</p>
+<p>年龄：{{ age }}</p>
+<p>感兴趣的技术:{{ fancy.0 }}, {{ fancy.1 }}, {{ fancy.2 }}</p>
+
+<h1>通过字典键值对取值</h1>
+<p>博客地址：
+    <a href="{{ blog.url }}">{{ blog.url }}</a>
+</p>
+
+<p>图片
+    <img src="{{ blog.img }}">
+</p>
+
+<h1>通过属性、方法取值</h1>
+<p>name: {{ myblog.name }}</p>
+<p>粉丝: {{ myblog.fensi }}</p>
+<p>关注：{{ myblog.guanzhu }}</p>
+
+</body>
+</html>

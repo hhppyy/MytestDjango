@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提交数据</title>
+</head>
+<body>
+
+<form action="" method="post">
+    {% csrf_token %}
+    请输入你的手机号 <input type="text" name="tel" required="required">
+    <br>
+    请输入你的昵称 <input type="text" name="name" required="required">
+    <br>
+    请输入你的邮箱 <input type="text" name="mail">
+    <br>
+    请输入你年龄 <input type="text" name="age">
+    <br>
+    <input type="submit" value="提交">
+
+</form>
+
+
+
+</body>
+</html>
